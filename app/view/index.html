@@ -1,0 +1,50 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+</head>
+<body>
+<div>
+  <div class='center'>
+    <div class='title'>Classify Skin Lesion Images </div>
+    <p>
+      Returns most probable value from this list ['AK', 'BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']
+
+    'nv': 'Melanocytic nevi',
+    'mel': 'Melanoma',
+    'bkl': 'Benign keratosis ',
+    'bcc': 'Basal cell carcinoma',
+    'akiec': 'Actinic keratoses',
+    'vasc': 'Vascular lesions',
+    'df': 'Dermatofibroma'
+
+  Use images similar to this:  <IMG src="https://drive.google.com/uc?export=download&id=1FxmglI18kru7opqvUw-ZWeNb58gM3-Vd" alt="Dodgy Mole" height="200" width="200">
+    </p>
+    <div class='content'>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div>
+      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+      <div class='upload-label'>
+        <label id='upload-label'>No file chosen</label>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
