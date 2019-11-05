@@ -2,10 +2,10 @@
 
 This repo can be used as a starting point to deploy [fast.ai](https://github.com/fastai/fastai) models on Render.
 
-The sample app described here is up at https://fastai-v3.onrender.com. Test it out with bear images!
+Should be forked from Forked from https://github.com/render-examples/fastai-v3
+
 
 You can test your changes locally by installing Docker and using the following command:
-
 ```
 docker build -t fastai-v3 . && docker run --rm -it -p 5001:5001 fastai-v3
 ```
@@ -20,3 +20,7 @@ Please use [Render's fast.ai forum thread](https://forums.fast.ai/t/deployment-p
 
 I've also punted this up to https://hub.docker.com/r/finlayatdocker/fastaiisic2019 if you just want to launch a pre built version.
 >>>>>>> 443055bfa2aedac3a7c72425365d8a83f745c193
+
+You can run it on your own web host with:
+
+sudo docker run  --rm -it -p 5001:5001 finlayatdocker/fastaiisic2019
